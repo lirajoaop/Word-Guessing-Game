@@ -29,7 +29,15 @@ h1 {
 }
 
 input {
-    
+    width: 30px;
+    padding: 1%;
+    font-size: larger;
+    text-align: center;
+    margin-left: 2%;
+}
+
+#displayWord {
+    font-size: xx-large;
 }
 
 

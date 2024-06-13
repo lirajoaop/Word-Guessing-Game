@@ -24,4 +24,5 @@ for (let i = 0; i < selectedWord.length; i++){
 
 }
 
-console.log(displayWord)
+document.getElementById("display-word").textContent = displayWord
+
