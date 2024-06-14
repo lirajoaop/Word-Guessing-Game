@@ -13,8 +13,6 @@ const words = ["banana",
 let randomIndex = Math.floor(Math.random() * words.length)
 let selectedWord = words[randomIndex]
 
-console.log(selectedWord)
-
 let guessedList = []
 
 // Número de espaços com base na palavra selecionada (_)
@@ -24,8 +22,10 @@ for (let i = 0; i < selectedWord.length; i++){
 
 }
 
-document.getElementById("display-word").textContent = displayWord
+// alinhando o JS com tag HTML 
+document.getElementById("displayWord").textContent = displayWord
 
+// Função de adivinhar Letra
 function guessLetter (){
     let inputElement = document.getElementById("letter-input")
 
@@ -34,7 +34,7 @@ function guessLetter (){
         alert('Caixa vazia. Por favor, adicione uma letra.')
         return
     }
-    // transformar em letra minúscula
+    // transformar em letra minúscula para igualar em verificação posterior
     let letter = inputElement.value.toLowerCase()
 
     //Limpando o campo de input
@@ -46,4 +46,33 @@ function guessLetter (){
         return
     }
 
+    // Adicionando a letra adivinhada ao array de letras
+    guessedList.push(letter)
+
+    //Atualizar o display
+    updateDisplay()
 }
+
+// Função para atualizar o display
+function updateDisplay(){
+
+let updatedDisplay = ''
+let allLettersGuessed = true
+
+for (let i = 0; i < selectedWord.length; i++){
+    if (guessedList.includes(selectedWord[i])){
+        updatedDisplay += selectedWord[i] + ' '
+    } else {
+        updatedDisplay += '_ '
+        allLettersGuessed = false
+    }
+}
+
+document.getElementById('displayWord').textContent = updatedDisplay
+
+//checar se todas as letras foram adivinhadas
+if(allLettersGuessed){
+    alert('Parabéns, você adivinhou a palavra corretamente :)')
+}
+} 
+
