@@ -9,6 +9,10 @@ const words = ["banana",
 "tangerina"
 ]
 
+//DOM
+let inputElement = document.getElementById('letter-input')
+let submitButton = document.getElementById('submit-button')
+
 // Pegando uma palavra aleatória da lista 
 let randomIndex = Math.floor(Math.random() * words.length)
 let selectedWord = words[randomIndex]
@@ -22,12 +26,12 @@ for (let i = 0; i < selectedWord.length; i++){
 
 }
 
-// alinhando o JS com tag HTML 
+// alinhando JS com HTML 
 document.getElementById("displayWord").textContent = displayWord
+
 
 // Função de adivinhar Letra
 function guessLetter (){
-    let inputElement = document.getElementById("letter-input")
 
     // Para checar input vazio
     if(!inputElement.value){
@@ -76,3 +80,11 @@ if(allLettersGuessed){
 }
 } 
 
+// Eventos
+inputElement.addEventListener('keypress', function (e) {
+    if(e.key ==='Enter'){
+        guessLetter()
+    }
+})
+
+submitButton.addEventListener('click', guessLetter)
