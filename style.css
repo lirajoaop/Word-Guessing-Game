@@ -14,6 +14,7 @@ body {
 }
 
 .card {
+  border: 2px solid #800080;
   background-color: #ffffff;
   position: relative;
   display: flex;
@@ -32,6 +33,7 @@ body {
 }
 
 h1 {
+  text-shadow: 2px 2px #d3d3d3;
   color: #800080;
   font-size: 2rem;
   padding: 2%;
@@ -91,7 +93,8 @@ button {
 }
 
 button:hover {
-  background-color: #2e8b57;
+  background-color: #006400;
+  box-shadow: 0 0 10px rgba(0, 100, 0, 0.5);
 }
 
 .hint-container {
@@ -103,5 +106,5 @@ button:hover {
 }
 
 #category {
-  color: #ffa500;
+  color: #228b22;
 }
