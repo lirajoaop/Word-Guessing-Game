@@ -1,49 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
+  background-color: #f3e5f5;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  margin: 0;
+  color: #333333;
 }
 
 .card {
-  min-width: 40%;
-  width: 50vh;
-  min-height: 40%;
-  height: 50vh;
-  box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 600px;
+  min-height: 50vh;
+  box-shadow: 0 0 10px #d3d3d3;
   transition: 0.3s;
   border-radius: 5px;
   margin: auto;
   padding: 2%;
-  text-align: center;
+  gap: 20px;
 }
 
 h1 {
-  background-color: rgb(231, 231, 231);
-  color: green;
-  font-size: xx-large;
+  color: #800080;
+  font-size: 2rem;
   padding: 2%;
 }
 
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
 input {
-  width: 30px;
-  padding: 1%;
-  font-size: larger;
+  border: 1px solid #800080;
+  border-radius: 4px;
+  width: 2rem;
+  height: 2rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
   text-align: center;
-  margin-left: 2%;
+}
+
+label {
+  white-space: nowrap;
+  padding-right: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #800080;
 }
 
 #displayWord {
-  font-size: xx-large;
+  letter-spacing: 0.1em;
+  color: black;
+  font-size: 2rem;
 }
 
-#hint,
+.hint-container,
 #letter-paragraph {
-  font-size: larger;
+  font-size: 1.2rem;
 }
 
 #submit-button {
-  font-size: medium;
+  font-size: 1rem;
+}
+
+button {
+  cursor: pointer;
+  margin-top: 1rem;
+  background-color: #ff6f61;
+  color: #ffffff;
+  padding: 1rem 1rem;
+  margin: 0.5rem 0;
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #e55b50;
+}
+
+.hint-container {
+  font-size: 1.5rem;
+  gap: 0.2rem;
+  display: flex;
+  font-style: italic;
+  color: #333333;
+}
+
+#category {
+  color: #ffa500;
 }
