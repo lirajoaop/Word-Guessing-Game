@@ -148,8 +148,8 @@ button:hover {
   padding: 10px;
   border-radius: 8px;
   height: 17vh;
-  width: 90%;
-  max-width: 90vw;
+  width: 50vw;
+  max-width: 22vh;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   overflow: auto;
   font-size: 1.2rem;
@@ -162,14 +162,4 @@ button:hover {
   font-size: 1.2rem;
   color: #800080;
   word-break: break-all;
-}
-
-@media (max-width: 600px) {
-  .guessed-letters-container {
-    /* Ajuste a posição e o tamanho do contêiner para dispositivos móveis */
-    top: 30vh;
-    right: 1vh;
-    width: 80vw;
-    height: auto;
-  }
 }
