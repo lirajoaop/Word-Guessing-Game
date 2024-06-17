@@ -28,6 +28,7 @@ for (let i = 0; i < selectedWord.length; i++) {
 
 // alinhando JS com HTML
 document.getElementById("displayWord").textContent = displayWord;
+document.getElementById("guessed-letters").textContent = guessedList.join(", ");
 
 // Função de adivinhar Letra
 function guessLetter() {
@@ -50,6 +51,10 @@ function guessLetter() {
 
   // Adicionando a letra adivinhada ao array de letras
   guessedList.push(letter);
+
+  //Atualizar a lista de letras adivinhadas na interface do usuário
+  document.getElementById("guessed-letters").textContent =
+    guessedList.join(", ");
 
   //Atualizar o display
   updateDisplay();
