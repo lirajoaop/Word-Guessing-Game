@@ -147,7 +147,7 @@ button:hover {
   background-color: #f3e5f5;
   padding: 10px;
   border-radius: 8px;
-  height: 18vh;
+  height: 17vh;
   width: 90%;
   max-width: 22vh;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -162,4 +162,16 @@ button:hover {
   font-size: 1.2rem;
   color: #800080;
   word-break: break-all;
+}
+
+/* Estilos para dispositivos com largura de viewport de até 600px */
+@media (max-width: 600px) {
+  .guessed-letters-container {
+    top: 30vh; /* Ajuste a posição vertical */
+    right: 1vh; /* Ajuste a posição horizontal */
+    height: 30vh; /* Ajuste a altura */
+    width: 80%; /* Ajuste a largura */
+    max-width: none; /* Remova a largura máxima */
+    font-size: 1rem; /* Ajuste o tamanho da fonte */
+  }
 }
