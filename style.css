@@ -138,3 +138,28 @@ button:hover {
 #category {
   color: #228b22;
 }
+
+.guessed-letters-container {
+  position: absolute;
+  top: 50vh;
+  right: 3vh;
+  border: 2px solid #800080;
+  background-color: #f3e5f5;
+  padding: 10px;
+  border-radius: 8px;
+  height: 18vh;
+  width: 90%;
+  max-width: 22vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+  font-size: 1.2rem;
+  color: #800080;
+  text-align: center;
+}
+
+#guessed-letters {
+  margin: 5px 0;
+  font-size: 1.2rem;
+  color: #800080;
+  word-break: break-all;
+}
