@@ -10,8 +10,17 @@ const words = [
   "tangerina",
 ];
 
+//validação de input apenas para letras
+
+function validateInput() {
+  this.value = this.value.replace(/[^a-zA-Z]/g, "");
+}
+
 //DOM
+
 let inputElement = document.getElementById("letter-input");
+inputElement.addEventListener("input", validateInput);
+
 let submitButton = document.getElementById("submit-button");
 
 // Pegando uma palavra aleatória da lista
